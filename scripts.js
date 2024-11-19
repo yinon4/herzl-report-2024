@@ -1,35 +1,60 @@
-// JavaScript to handle slide transitions
+document.addEventListener("DOMContentLoaded", function () {
+  let currentSlideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+  const showButtons = document.querySelectorAll(".show");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+  // Show the current slide and hide others
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
+    });
+    reHideH1();
+  }
 
-function goToSlide(index) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (index + totalSlides) % totalSlides;
-    slides[currentSlide].classList.add('active');
-}
+  function reHideH1() {
+    const h1s = document.querySelectorAll("h1");
+    h1s.forEach((h1) => {
+      h1.style.display = "none";
+    });
 
-// Automatically go to the next slide every 3 seconds
-setInterval(() => {
-    goToSlide(currentSlide + 1);
-}, 3000); // Change every 3 seconds
+    showButtons.forEach((button) => {
+      button.style.display = "inline-block";
+    });
+  }
 
-// Initial slide
-goToSlide(0);
+  // Show/hide the h1 text when the "הראה" button is clicked
+  showButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const h1 = button.previousElementSibling.previousElementSibling;
 
-// Optional: Handle swipe events for mobile-friendly navigation (for better user experience)
-let startX = 0;
+      if (h1 && h1.tagName === "H1") {
+        h1.style.display = "block";
+        button.style.display = "none";
+      }
+    });
+  });
 
-document.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-});
+  // Show the first slide
+  showSlide(currentSlideIndex);
 
-document.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) {
-        goToSlide(currentSlide + 1);  // Swipe left
-    } else if (endX - startX > 50) {
-        goToSlide(currentSlide - 1);  // Swipe right
+  // Handle "previous" and "next" buttons
+  prevButton.addEventListener("click", function () {
+    if (currentSlideIndex > 0) {
+      currentSlideIndex--;
+      showSlide(currentSlideIndex);
     }
+  });
+
+  nextButton.addEventListener("click", function () {
+    if (currentSlideIndex < slides.length - 1) {
+      currentSlideIndex++;
+      showSlide(currentSlideIndex);
+    }
+  });
 });
