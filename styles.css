@@ -1,0 +1,134 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Wrapper for all slides */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Slide Style */
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+/* Make each slide visible as we go */
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.intro {
+    background-color: #746a70;
+    color: white;
+}
+
+.slide.stat:nth-child(2) {
+    background-color: #f4b6c2;
+    color: #333;
+}
+
+.slide.stat:nth-child(3) {
+    background-color: #fddc44;
+    color: #333;
+}
+
+.slide.stat:nth-child(4) {
+    background-color: #34c6a4;
+    color: white;
+}
+
+.slide.stat:nth-child(5) {
+    background-color: #f54e42;
+    color: white;
+}
+
+.slide.stat:nth-child(6) {
+    background-color: #c9a7d0;
+    color: white;
+}
+
+.slide.stat:nth-child(7) {
+    background-color: #f9aab2;
+    color: #333;
+}
+
+.slide.stat:nth-child(8) {
+    background-color: #a5e1ef;
+    color: #333;
+}
+
+.slide.stat:nth-child(9) {
+    background-color: #ffd600;
+    color: #333;
+}
+
+.slide.end {
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* Content Style */
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-size: 6rem;
+    margin: 20px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 5rem;
+    color: white;
+}
+
+p {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: white;
+}
+
+footer {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
