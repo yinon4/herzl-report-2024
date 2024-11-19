@@ -1,0 +1,252 @@
+/* Background 1: Diagonal Stripes with Varying Sizes */
+.bg1 {
+  background-color: var(--color1, #f0f0f0);
+  background-image: repeating-linear-gradient(
+    var(--angle, 45deg),
+    var(--color1, #f0f0f0) 0px,
+    var(--color1, #f0f0f0) 10px,
+    var(--color2, #ff6347) 10px,
+    var(--color2, #ff6347) 20px,
+    var(--color3, #33ccff) 20px,
+    var(--color3, #33ccff) 30px,
+    var(--color4, #ffff00) 30px,
+    var(--color4, #ffff00) 40px
+  );
+  background-size: var(--width, 150%) var(--height, 150%);
+  animation: moveBackground1 6s linear infinite;
+}
+
+@keyframes moveBackground1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Background 2: Vertical Stripes with Gradients */
+.bg2 {
+  background-color: var(--color1, #e5e5f7);
+  background-image: repeating-linear-gradient(
+    var(--angle, 90deg),
+    var(--color1, #e5e5f7) 0px,
+    var(--color1, #e5e5f7) 25px,
+    var(--color2, #ff8c00) 25px,
+    var(--color2, #ff8c00) 50px,
+    var(--color3, #ff1493) 50px,
+    var(--color3, #ff1493) 75px,
+    var(--color4, #33ccff) 75px,
+    var(--color4, #33ccff) 100px
+  );
+  background-size: var(--width, 100%) var(--height, 100px);
+  animation: moveBackground2 5s linear infinite;
+}
+
+@keyframes moveBackground2 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* Background 3: Circular Gradient */
+.bg3 {
+  background-color: var(--color1, #77ff77);
+  background-image: radial-gradient(
+    circle,
+    var(--color1, #77ff77) 10%,
+    var(--color2, #ff6347) 40%,
+    var(--color3, #33ccff) 70%,
+    var(--color4, #ff1493) 100%
+  );
+  background-size: var(--width, 200%) var(--height, 200%);
+  background-position: center;
+  animation: rotateBackground3 8s linear infinite;
+}
+
+@keyframes rotateBackground3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Background 4: Diamond Pattern with Background Size Adjustment */
+.bg4 {
+  background-color: var(--color1, #f5f5f5);
+  background-image: linear-gradient(
+      var(--angle, 45deg),
+      transparent 75%,
+      var(--color2, #ff6347) 75%
+    ),
+    linear-gradient(
+      var(--angle, -45deg),
+      transparent 75%,
+      var(--color2, #ff6347) 75%
+    );
+  background-size: var(--width, 40px) var(--height, 40px);
+  background-position: 0 0, 20px 20px;
+  animation: moveBackground4 4s linear infinite;
+}
+
+@keyframes moveBackground4 {
+  0% {
+    background-position: 0 0, 20px 20px;
+  }
+  100% {
+    background-position: 100% 100%, 120px 120px;
+  }
+}
+
+/* Background 5: Conic Gradient with Multiple Colors */
+.bg5 {
+  background-color: var(--color1, #ff7f50);
+  background-image: conic-gradient(
+    from var(--angle, 90deg),
+    var(--color1, #ff7f50) 0% 25%,
+    var(--color2, #ff1493) 25% 50%,
+    var(--color3, #33ccff) 50% 75%,
+    var(--color4, #ffff00) 75% 100%
+  );
+  background-size: var(--width, 100%) var(--height, 100%);
+  animation: rotateBackground5 6s linear infinite;
+}
+
+@keyframes rotateBackground5 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Background 6: Radial Stripes with Gradient Fill */
+.bg6 {
+  background-color: var(--color1, #f0f0f0);
+  background-image: radial-gradient(
+    circle closest-side,
+    var(--color1, #f0f0f0) 25%,
+    var(--color2, #ff6347) 50%,
+    var(--color3, #33ccff) 75%,
+    var(--color4, #ffff00) 100%
+  );
+  background-size: var(--width, 100%) var(--height, 100%);
+  animation: moveRadialStripes 5s linear infinite;
+}
+
+@keyframes moveRadialStripes {
+  0% {
+    background-position: center;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+/* Background 7: Complex Stripe Pattern with Multiple Angles */
+.bg7 {
+  background-color: var(--color1, #ff6347);
+  background-image: repeating-linear-gradient(
+    var(--angle, 45deg),
+    var(--color1, #ff6347) 0px,
+    var(--color1, #ff6347) 15px,
+    var(--color2, #33ccff) 15px,
+    var(--color2, #33ccff) 30px,
+    var(--color3, #ff8c00) 30px,
+    var(--color3, #ff8c00) 45px,
+    var(--color4, #ff1493) 45px,
+    var(--color4, #ff1493) 60px
+  );
+  background-size: var(--width, 80%) var(--height, 80%);
+  animation: moveStripes7 5s linear infinite;
+}
+
+@keyframes moveStripes7 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Background 8: Zig-Zag Pattern */
+.bg8 {
+  background-color: var(--color1, #f9f9f9);
+  background-image: linear-gradient(
+    var(--angle, 135deg),
+    var(--color1, #f9f9f9) 25%,
+    var(--color2, #ff6347) 25% 50%,
+    var(--color3, #33ccff) 50% 75%,
+    var(--color4, #ffff00) 75% 100%
+  );
+  background-size: var(--width, 100px) var(--height, 100px);
+  background-repeat: repeat;
+  animation: moveZigZag8 6s linear infinite;
+}
+
+@keyframes moveZigZag8 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Background 9: Gradient with Different Angles */
+.bg9 {
+  background-color: var(--color1, #f0f0f0);
+  background-image: linear-gradient(
+    var(--angle, 30deg),
+    var(--color1, #f0f0f0) 0%,
+    var(--color2, #ff6347) 25%,
+    var(--color3, #33ccff) 50%,
+    var(--color4, #ff1493) 75%,
+    var(--color1, #f0f0f0) 100%
+  );
+  background-size: var(--width, 300%) var(--height, 300%);
+  animation: moveGradient9 8s linear infinite;
+}
+
+@keyframes moveGradient9 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Background 10: Angular Gradients with Staggered Sizes */
+.bg10 {
+  background-color: var(--color1, #ff6347);
+  background-image: repeating-linear-gradient(
+    var(--angle, 60deg),
+    var(--color1, #ff6347) 0px,
+    var(--color1, #ff6347) 10px,
+    var(--color2, #ff8c00) 10px,
+    var(--color2, #ff8c00) 20px,
+    var(--color3, #ff1493) 20px,
+    var(--color3, #ff1493) 30px,
+    var(--color4, #33ccff) 30px,
+    var(--color4, #33ccff) 40px
+  );
+  background-size: var(--width, 50%) var(--height, 50%);
+  animation: moveBackground10 6s linear infinite;
+}
+
+@keyframes moveBackground10 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}

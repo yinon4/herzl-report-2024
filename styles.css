@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: "Fredoka One", sans-serif;
   direction: rtl;
@@ -11,11 +12,12 @@ title {
   display: block;
   position: absolute;
   font-size: 10em;
+  width: 100%;
+  text-align: center;
 }
 
 .slide {
   display: none;
-  background-color: white;
   height: 100vh;
 }
 
