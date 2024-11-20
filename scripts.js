@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setBackground() {
     body.classList.remove(...backgrounds); // Remove all background classes
-    const randomIndex = Math.floor(Math.random() * backgrounds.length); // Get random index
+    const randomIndex = Math.floor(Math.random() * backgrounds.length) + 1; // Get random index
     body.classList.add(`bg${randomIndex}`); // Apply the random background class
     randomizeVars(body);
   }
@@ -42,21 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function randomizeVars() {
     // colors
-    const randomNum = Math.floor(Math.random() * 90);
+    const randomNum = Math.floor(Math.random() * 360);
     const cols = [0, 135, -135, 180].map(
       (num) => (num + randomNum + 360) % 360
     );
     const hslas = cols.map((val) => `hsl(${val}, 100%, 66%)`);
     hslas.forEach((hsla, i) => {
-      body.style.setProperty(`--color${i}`, hsla);
+      body.style.setProperty(`--color${i + 1}`, hsla);
     });
 
     // angle
     const angle = Math.random() * 360;
     body.style.setProperty("--angle", `${angle}deg`);
+
     // boxSize
-    const width = 100 / Math.floor(Math.random() * 100);
-    const height = 100 / Math.floor(Math.random() * 100);
+    const width = 100 / Math.floor(Math.random() * 50);
+    const height = 100 / Math.floor(Math.random() * 50);
     body.style.setProperty("--width", `${width}%`);
     body.style.setProperty("--height", `${height}%`);
   }

@@ -2,10 +2,10 @@
 body {
   font-family: "Fredoka One", sans-serif;
   direction: rtl;
-  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
 
 title {
@@ -22,17 +22,18 @@ title {
 }
 
 .slide.active {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border-radius: 1em;
+  padding: 1em;
   text-align: center;
-  height: 100%;
-  width: 100%;
+  background-color: var(--color1);
+  max-width: 800px;
+  min-width: 250px;
 }
 
 h1 {
@@ -52,17 +53,17 @@ button {
   padding: 10px 20px;
   font-size: 2em;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5em;
   cursor: pointer;
   width: 10em;
 }
 
 button.show {
-  background-color: #4caf50;
+  background-color: var(--color2);
 }
 
 button.show:hover {
-  background-color: #45a049;
+  background-color: var(--color2);
 }
 
 .navigation {
