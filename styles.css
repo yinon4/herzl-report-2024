@@ -6,12 +6,15 @@ body {
   padding: 0;
   position: relative;
   overflow: hidden;
+  color: white;
+  -webkit-text-stroke: 0.1em black;
+  user-select: none; /* Standard syntax */
 }
 
 title {
   display: block;
   position: absolute;
-  font-size: 10em;
+  font-size: 5em;
   width: 100%;
   text-align: center;
 }
@@ -37,14 +40,14 @@ title {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 7.55em;
   margin-bottom: 20px;
   margin-top: 0;
   display: none;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 5em;
   margin-top: 0px;
 }
 
@@ -56,6 +59,7 @@ button {
   border-radius: 0.5em;
   cursor: pointer;
   width: 10em;
+  -webkit-text-stroke: 0;
 }
 
 button.show {
