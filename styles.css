@@ -12,7 +12,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* overflow: hidden; */
   color: white;
   -webkit-text-stroke: 0.1em black;
   user-select: none;
@@ -20,6 +19,7 @@ body {
 }
 
 title {
+  padding-top: 1em;
   align-self: flex-start;
   display: block;
   font-size: 5em;
@@ -113,7 +113,6 @@ button.next:hover {
 @media only screen and (max-width: 600px) {
   body {
     padding-top: 5em;
-    /* padding-bottom: 5em; */
   }
   title {
     font-size: 3em;
