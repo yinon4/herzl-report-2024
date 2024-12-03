@@ -100,15 +100,19 @@ button.next:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  title {
+    font-size: 3em;
+  }
   h1 {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   h2 {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   button {
     font-size: 1.5em;
+    transform: none !important;
   }
 }
