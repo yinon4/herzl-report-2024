@@ -62,7 +62,7 @@ function randomizeVars() {
 function reHideH1() {
   const h1s = document.querySelectorAll("h1");
   h1s.forEach((h1) => {
-    h1.style.display = "none";
+    h1.style.opacity = "0";
   });
 
   showButtons.forEach((button) => {
@@ -77,8 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const h1 = button.previousElementSibling.previousElementSibling;
 
       if (h1 && h1.tagName === "H1") {
-        h1.style.display = "block";
-        button.style.display = "none";
+        const makeShow = button.textContent === "הראה";
+        h1.style.opacity = makeShow ? "1" : "0";
+        button.textContent = makeShow ? "הסתר" : "הראה";
       }
     });
   });

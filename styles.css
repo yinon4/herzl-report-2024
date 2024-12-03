@@ -8,7 +8,7 @@ body {
   overflow: hidden;
   color: white;
   -webkit-text-stroke: 0.1em black;
-  user-select: none; /* Standard syntax */
+  user-select: none;
 }
 
 title {
@@ -37,13 +37,14 @@ title {
   background-color: var(--color1);
   max-width: 800px;
   min-width: 250px;
+  margin: 10px;
 }
 
 h1 {
   font-size: 7.55em;
   margin-bottom: 20px;
   margin-top: 0;
-  display: none;
+  transition: 0.5s ease;
 }
 
 h2 {
@@ -60,14 +61,25 @@ button {
   cursor: pointer;
   width: 10em;
   -webkit-text-stroke: 0;
+  margin: 10px;
+  transition: 0.1s;
 }
 
 button.show {
   background-color: var(--color2);
 }
 
-button.show:hover {
+button:hover {
   background-color: var(--color2);
+  transform: scale(1.5);
+  transition: 0.1s;
+  letter-spacing: 1rem;
+}
+
+button:active {
+  transform: scale(0.75);
+  transition: 0.1s;
+  letter-spacing: normal;
 }
 
 .navigation {
@@ -85,4 +97,18 @@ button.next {
 button.prev:hover,
 button.next:hover {
   background-color: #1976d2;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  button {
+    font-size: 1.5em;
+  }
 }
