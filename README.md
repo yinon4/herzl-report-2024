@@ -3,4 +3,5 @@
 ## TODO
 
 - deploy
-- bouncy
+  - github pages ror
+  - azguard
