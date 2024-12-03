@@ -3,5 +3,6 @@
 ## TODO
 
 - deploy
-  - github pages ror
+  - github pages
+  - or
   - azguard
