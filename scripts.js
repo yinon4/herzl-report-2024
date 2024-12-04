@@ -76,7 +76,8 @@ function reHideH1() {
 document.addEventListener("DOMContentLoaded", function () {
   // Show/hide the h1 text when the "הראה" button is clicked
   showButtons.forEach((button) => {
-    button.addEventListener("mousedown", function () {
+    button.addEventListener("mousedown", play);
+    button.addEventListener("click", function () {
       const h1 = button.previousElementSibling.previousElementSibling;
       play();
       playHatikva();
