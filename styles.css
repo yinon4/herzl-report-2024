@@ -19,7 +19,6 @@ body {
 }
 
 title {
-  padding-top: 1em;
   align-self: flex-start;
   display: block;
   font-size: 5em;
@@ -97,7 +96,6 @@ button:active {
 .navigation {
   text-align: center;
   width: 100%;
-  padding-bottom: 1em;
 }
 
 button.prev,
@@ -114,9 +112,11 @@ button.next:hover {
   body {
     padding-top: 5em;
   }
+
   title {
     font-size: 3em;
   }
+
   h1 {
     font-size: 3em;
   }
