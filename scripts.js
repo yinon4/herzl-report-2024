@@ -18,6 +18,7 @@ const showButtons = document.querySelectorAll(".show");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 const body = document.querySelector("body");
+const button = document.querySelector("button");
 
 function setBackground() {
   body.classList.remove(...backgrounds); // Remove all background classes
@@ -75,8 +76,10 @@ function reHideH1() {
 document.addEventListener("DOMContentLoaded", function () {
   // Show/hide the h1 text when the "הראה" button is clicked
   showButtons.forEach((button) => {
-    button.addEventListener("click", function () {
+    button.addEventListener("mousedown", function () {
       const h1 = button.previousElementSibling.previousElementSibling;
+      play();
+      playHatikva();
 
       if (h1 && h1.tagName === "H1") {
         const makeShow = button.textContent === "הראה";
@@ -90,17 +93,27 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide(currentSlideIndex);
 
   // Handle "previous" and "next" buttons
-  prevButton.addEventListener("click", function () {
+  prevButton.addEventListener("mousedown", function () {
+    play();
     if (currentSlideIndex > 0) {
       currentSlideIndex--;
       showSlide(currentSlideIndex);
     }
   });
 
-  nextButton.addEventListener("click", function () {
+  nextButton.addEventListener("mousedown", function () {
+    play();
     if (currentSlideIndex < slides.length - 1) {
       currentSlideIndex++;
       showSlide(currentSlideIndex);
     }
   });
 });
+
+function play() {
+  document.getElementById("sound-1").play();
+}
+
+function playHatikva() {
+  document.getElementById("hatikva").play();
+}
