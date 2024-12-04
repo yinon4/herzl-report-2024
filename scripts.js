@@ -60,9 +60,11 @@ function randomizeVars() {
 }
 
 function reHideH1() {
-  const h1s = document.querySelectorAll("h1");
-  h1s.forEach((h1) => {
+  document.querySelectorAll("h1").forEach((h1) => {
     h1.style.opacity = "0";
+  });
+  document.querySelectorAll("button").forEach((button) => {
+    if (button.textContent === "הסתר") button.textContent = "הראה";
   });
 
   showButtons.forEach((button) => {
