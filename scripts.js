@@ -54,8 +54,8 @@ function randomizeVars() {
   body.style.setProperty("--angle", `${angle}deg`);
 
   // boxSize
-  const width = 100 / Math.floor(Math.random() * 50);
-  const height = 100 / Math.floor(Math.random() * 50);
+  const width = 100 / Math.floor(Math.random() * 25 + 1);
+  const height = 100 / Math.floor(Math.random() * 25 + 1);
   body.style.setProperty("--width", `${width}%`);
   body.style.setProperty("--height", `${height}%`);
 }
