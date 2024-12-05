@@ -76,10 +76,10 @@ function reHideH1() {
 document.addEventListener("DOMContentLoaded", function () {
   // Show/hide the h1 text when the "הראה" button is clicked
   showButtons.forEach((button) => {
-    button.addEventListener("mousedown", play);
+    button.addEventListener("mousedown", poyo);
     button.addEventListener("click", function () {
       const h1 = button.previousElementSibling.previousElementSibling;
-      play();
+      poyo();
       playHatikva();
 
       if (h1 && h1.tagName === "H1") {
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Handle "previous" and "next" buttons
   prevButton.addEventListener("mousedown", function () {
-    play();
+    poyo();
     if (currentSlideIndex > 0) {
       currentSlideIndex--;
       showSlide(currentSlideIndex);
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   nextButton.addEventListener("mousedown", function () {
-    play();
+    poyo();
     if (currentSlideIndex < slides.length - 1) {
       currentSlideIndex++;
       showSlide(currentSlideIndex);
@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function play() {
-  document.getElementById("sound-1").play();
+function poyo() {
+  document.getElementById("poyo").play();
 }
 
 function playHatikva() {
